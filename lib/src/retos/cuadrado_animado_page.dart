@@ -35,7 +35,7 @@ class __CuadradoAnimadoState extends State<_CuadradoAnimado>
     controller = new AnimationController(
         vsync: this, duration: Duration(milliseconds: 4500));
 
-    moverDerecha = Tween(begin: 0.0, end: 100.0).animate(CurvedAnimation(
+    moverDerecha = Tween(begin: -100.0, end: 100.0).animate(CurvedAnimation(
         parent: controller,
         curve: Interval(0.0, 0.25, curve: Curves.bounceOut)));
 

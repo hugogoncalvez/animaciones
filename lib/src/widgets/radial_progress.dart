@@ -49,6 +49,7 @@ class _RadialProgresState extends State<RadialProgres>
         animation: controller,
         builder: (BuildContext contex, child) {
           return Container(
+            color: Colors.transparent,
             width: double.infinity,
             height: double.infinity,
             child: CustomPaint(
