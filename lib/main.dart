@@ -1,7 +1,9 @@
-import 'package:animaciones/src/pages/animacion_perrito.dart';
-import 'package:animaciones/src/pages/slideshow_page.dart';
-import 'package:animaciones/src/retos/cuadrado_animado_page.dart';
+import 'package:animaciones/src/pages/bottom_Nav.dart';
+import 'package:animaciones/src/pages/slideShow_page.dart';
 import 'package:flutter/material.dart';
+import 'package:animaciones/src/pages/animacion_perrito.dart';
+import 'package:animaciones/src/Labs/slideshow_page.dart';
+import 'package:animaciones/src/retos/cuadrado_animado_page.dart';
 import 'package:animaciones/src/pages/graficas_circulares_page.dart';
 
 import 'package:animaciones/src/Labs/circular_progress_page.dart';
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Curso Diseño',
-      home: AnimacionPage(),
+      home: SlideshowPage(),
       debugShowCheckedModeBanner: false,
     );
   }
