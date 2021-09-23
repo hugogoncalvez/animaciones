@@ -1,6 +1,8 @@
+import 'package:animaciones/src/theme/theme_changer.dart';
 import 'package:flutter/material.dart';
 
 import 'package:animaciones/src/widgets/radial_progress.dart';
+import 'package:provider/provider.dart';
 
 class GraficasCircularesPage extends StatefulWidget {
   const GraficasCircularesPage({Key? key}) : super(key: key);
@@ -96,6 +98,7 @@ class CustomRadialProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appTheme = Provider.of<ThemeChanger>(context).currentTheme;
     return Container(
       padding: EdgeInsets.all(10),
       width: widthContainer,
@@ -104,7 +107,7 @@ class CustomRadialProgress extends StatelessWidget {
         RadialProgres(
           porcentaje: porcentaje,
           colorPrimario: colorPrimario,
-          colorSecundario: Colors.blueGrey[300] as Color,
+          colorSecundario: appTheme.textTheme.bodyText1!.color as Color,
           grosorLineaFondo: grosorLineaFondo,
           grosorLineaPregress: grosorLineaPregress,
         ),

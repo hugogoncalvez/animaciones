@@ -1,9 +1,8 @@
 import 'package:animaciones/src/theme/theme_changer.dart';
-import 'package:animaciones/src/widgets/slideShow.dart';
-
+import 'package:animaciones/src/widgets/slideshow.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class SlideshowPage extends StatelessWidget {
@@ -11,22 +10,13 @@ class SlideshowPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final appTheme = Provider.of<ThemeChanger>(context);
     final colorSheme = appTheme.currentTheme.colorScheme.secondary;
-    bool isLarge;
-    if (MediaQuery.of(context).size.height > 500) {
-      isLarge = true;
-    } else {
-      isLarge = false;
-    }
-
-    final children = [
-      _MiSlideShow(appTheme: appTheme, colorSheme: colorSheme),
-      _MiSlideShow(appTheme: appTheme, colorSheme: colorSheme)
-    ];
-
     return Scaffold(
-        // backgroundColor: Colors.purple,
-        // body: MiSlideshow(),
-        body: (isLarge) ? Column(children: children) : Row(children: children));
+        body: Column(
+      children: [
+        _MiSlideShow(appTheme: appTheme, colorSheme: colorSheme),
+        _MiSlideShow(appTheme: appTheme, colorSheme: colorSheme)
+      ],
+    ));
   }
 }
 
@@ -56,5 +46,3 @@ class _MiSlideShow extends StatelessWidget {
     );
   }
 }
-
-//Color(0xffFF5A7E)
